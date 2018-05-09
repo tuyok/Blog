@@ -1,0 +1,56 @@
+/* 标签页头部样式 */
+ul.tag-box {
+    height:40px;
+    line-height: 40px;
+    list-style: none;
+    margin-left:20px;
+}
+ul.tag-box .tag-item {
+    display: inline-block;
+    font-size: 16px;
+    padding:0px 15px;
+    color:#FFFFFF;
+    font-weight: 400;
+    /*border: 2px solid #28a4c9;*/
+    background-color: #555555;
+    height: 40px;
+    letter-spacing: 1px;
+    margin-right:5px;
+    /* 禁止双击选中文字 */
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+ul.tag-box .tag-item.active {
+    background-color: #28a4c9;
+}
+ul.tag-box .tag-item i {
+    position:relative;
+    left:8px;
+}
+ul.tag-box .tag-item i:hover {
+    color:#222222;
+}
+
+/* 使用案例，需要引入对应的js文件 */
+
+/*
+
+.content-head {
+    height:56px;
+    background-color: #333333;
+    padding-top: 8px;
+}
+
+<div class="content-head">
+    <ul id="tag-box" class="tag-box">
+        <li class="tag-item active">标签一 <i class="glyphicon glyphicon-remove-circle"></i></li>
+        <li class="tag-item">标签二 <i class="glyphicon glyphicon-remove-circle"></i></li>
+        <li class="tag-item">标签三 <i class="glyphicon glyphicon-remove-circle"></i></li>
+        <li class="tag-item">标签四 <i class="glyphicon glyphicon-remove-circle"></i></li>
+    </ul>
+</div>
+
+*/

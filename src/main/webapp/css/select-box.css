@@ -1,0 +1,63 @@
+/* 下拉菜单 */
+.select-box{
+    position: relative;
+    height:60px;
+    line-height: 60px;
+}
+.select-text {
+    padding-left:20px!important;
+    padding-right:20px!important;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+.select-text .glyphicon {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.select-text:hover{
+    color: #28a4c9;
+}
+.select-text + ul.select-content:before{
+    content: '\25B2';
+    color: #FFFFFF;
+    top: -35px;
+    position: absolute;
+    left: 45%;
+    height: 10px;
+}
+.select-text + ul.select-content {
+    display: none;
+    width: 100%;
+    background-color: #28a4c9;
+    list-style: none;
+    position: absolute;
+    top:50px;
+}
+ul.select-content li {
+    height: 40px;
+    padding:5px;
+    line-height: 30px;
+    width: 100%;
+    background-color: #FFFFFF;
+    text-align: center;
+    z-index: 2;
+    border-bottom: 2px solid #ebebeb;
+}
+ul.select-content li:hover{
+    background-color: #28a4c9;
+}
+
+/* 使用案例 */
+
+/*
+
+<div class="select-box pull-right">
+    <span class="select-text">酱油君 <i class="glyphicon glyphicon-triangle-bottom"></i></span>
+    <ul class="select-content">
+        <li>修改密码</li>
+        <li>退出登录</li>
+    </ul>
+</div>
+
+*/

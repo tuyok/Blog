@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>酱油君的博客-后台管理</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <!-- bootstrap-table -->
+    <link rel="stylesheet" href="/lib/bootstrap-table-1.12.1/bootstrap-table.min.css">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- 项目css -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/tag-box.css">
+    <link rel="stylesheet" href="/css/select-box.css">
+    <link rel="stylesheet" href="/css/menu-box.css">
+    <link rel="stylesheet" href="/css/admin.css">
+
+</head>
+<body>
+
+    <!-- 头部 -->
+    <div class="top-content">
+        <!-- logo -->
+        <div class="pull-left logo-info">
+            <strong>后台管理中心</strong>
+        </div>
+        <!-- 头部导航栏 -->
+        <nav class="pull-left top-nav">
+            <div class="nav-box">
+                <span><i class="glyphicon glyphicon-triangle-left"></i></span>
+                <ul class="nav-content">
+                    <li class="nav-item"><a href="#">网站首页</a></li>
+                    <li class="nav-item"><a href="#">案例模板</a></li>
+                    <li class="nav-item"><a href="#">系统运维</a></li>
+                    <li class="nav-item"><a href="#">数据仓库</a></li>
+                    <li class="nav-item active"><a href="#">系统设置</a></li>
+                </ul>
+                <span><i class="glyphicon glyphicon-triangle-right"></i></span>
+            </div>
+        </nav>
+        <!-- 登录信息 -->
+        <div class="pull-right login-info">
+            <div class="select-box pull-right">
+                <span class="select-text">酱油君 <i class="glyphicon glyphicon-triangle-bottom"></i></span>
+                <ul class="select-content">
+                    <li>修改密码</li>
+                    <li>退出登录</li>
+                </ul>
+            </div>
+            <img src="/img/head_icon.jpg" class="img-responsive img-circle pull-right mt-10" width="40">
+        </div>
+    </div>
+
+    <!-- 菜单 + 内容 -->
+    <div id="main-container">
+
+        <!-- 左侧菜单栏 -->
+        <div class="menu-box">
+            <div class="menu-title"><i class="pull-left glyphicon glyphicon-menu-hamburger"></i> 菜单栏</div>
+            <div class="menu-body">
+                <ul class="menu-items" data-menu-level="1" data-show-child="true">
+                    <!--<li class="menu-item">
+                        <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> <a href="#">用户管理</a></div>
+                        <ul class="menu-items" data-menu-level="2">
+                            <li class="menu-item">
+                                <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> <a href="#">系统管理</a></div>
+                                <ul class="menu-items" data-menu-level="3">
+                                    <li class="menu-item">
+                                        <div class="menu-name"> <a href="#">插件管理</a></div>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-name"> <a href="#">图片管理</a></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-name"> <a href="#">文章管理</a></div>
+                            </li>
+                        </ul>
+                    </li>-->
+                    <li class="menu-item">
+                        <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> <a href="#">系统管理</a></div>
+                        <ul class="menu-items" data-menu-level="2">
+                            <li class="menu-item">
+                                <div class="menu-name" onclick="_tagBox.createTagBox('导航栏管理','/html/admin-child/navManage.html');">导航栏管理</div>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-name" onclick="_tagBox.createTagBox('菜单管理','/html/admin-child/menuManage.html');">菜单管理</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> 我的收藏</div>
+                        <ul class="menu-items" data-menu-level="2">
+                            <li class="menu-item">
+                                <div class="menu-name" onclick="_tagBox.createTagBox('网站收藏','/html/admin-child/websiteBook.html');">网站书签</div>
+                            </li>
+                            <!--<li class="menu-item">
+                                <div class="menu-name" onclick="_tagBox.createTagBox('菜单管理','/html/admin-child/menuManage.html');">菜单管理</div>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> 访客管理</div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-name" onclick="_tagBox.createTagBox('图片管理','/html/index-child/imagesStream.html');"><i class="glyphicon glyphicon-triangle-right"></i> 图片管理</div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-name" onclick="_tagBox.createTagBox('文件管理','/html/index-child/home.html');"><i class="glyphicon glyphicon-triangle-right"></i> 文件管理</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 页面内容 -->
+        <div id="main-content" class="main-content">
+            <div class="content-head">
+                <!-- tagBox 组件 -->
+                <ul id="tag-box" class="tag-box"></ul>
+            </div>
+            <div id="contentHtml" class="content-box">
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 基于jquery -->
+    <script src="/lib/jquery/jquery-3.3.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    <!-- bootstrap-table -->
+    <script src="/lib/bootstrap-table-1.12.1/bootstrap-table.min.js"></script>
+    <script src="/lib/bootstrap-table-1.12.1/bootstrap-table-zh-CN.min.js"></script>
+
+    <!-- layer -->
+    <script src="/lib/layer/layer.js"></script>
+
+    <!-- 项目 js -->
+    <script src="/js/base.js"></script>
+    <script src="/js/tag-box.js"></script>
+    <script src="/js/select-box.js"></script>
+    <script src="/js/menu-box.js"></script>
+    <script src="/js/admin.js"></script>
+
+</body>
+</html>

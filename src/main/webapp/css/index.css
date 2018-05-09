@@ -1,0 +1,39 @@
+
+/* 导航栏 */
+nav.head-nav {
+    border-top:2px solid #9d9d9d ;
+    border-bottom:2px solid #9d9d9d ;
+    height: 64px;
+    line-height: 40px;
+}
+nav.head-nav ul {
+    height:60px;
+}
+nav.head-nav li {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+
+/* 页面底部信息 */
+footer{
+    margin-top:50px;
+    background-color: #3c3c3c;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 100px;
+}
+footer div.bottom{
+    max-width:1000px;
+    padding-left: 10px;padding-right: 10px;
+}
+footer div.bottom .links{
+    height:30px;
+}
+footer div.bottom .links li {
+    display: inline-block;
+}
+footer div.bottom .links li+li {
+    padding-left: 20px;
+}

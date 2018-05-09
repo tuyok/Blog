@@ -1,0 +1,51 @@
+<style>
+
+
+</style>
+
+<div class="container-fluid plr-clear">
+
+    <table id="archive-table">
+
+    </table>
+
+</div>
+
+<script>
+    $(function(){
+        $("#archive-table").bootstrapTable({
+            classes:'table table-hover table-no-bordered',
+            columns: [{
+                field: 'title',
+                title: '日志标题',
+            }, {
+                field: 'categoryName',
+                title: '日志分类',
+            }, {
+                field: 'updateTime',
+                title: '更新时间',
+            }],
+            data: [{
+                title: '<a href="#">Java设计模式之观察者模式，装饰者模式，代理模式</a>',
+                categoryName: 'Java编程',
+                updateTime: '2017/04/01 12:12:23'
+            }, {
+                title: '<a href="#">Java设计模式之观察者模式</a>',
+                categoryName: 'Java编程',
+                updateTime: '2017/04/01 12:12:23'
+            }, {
+                title: '<a href="#">Java设计模式之观察者模式</a>',
+                categoryName: 'Java编程',
+                updateTime: '2017/04/01 12:12:23'
+            }, {
+                title: '<a href="#">Java设计模式之观察者模式</a>',
+                categoryName: 'Java编程',
+                updateTime: '2017/04/01 12:12:23'
+            }, {
+                title: '<a href="#">Java设计模式之观察者模式</a>',
+                categoryName: 'Java编程',
+                updateTime: '2017/04/01 12:12:23'
+            }]
+        })
+    })
+</script>

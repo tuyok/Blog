@@ -1,0 +1,113 @@
+/* 应用媒体查询 */
+@media screen and (max-width: 1000px) {
+    .menu-box {
+        display: none;
+    }
+}
+
+/* 左侧菜单栏 */
+.menu-box {
+    width:220px;
+    background-color: #444444;
+    /*padding-top:10px;*/
+    border-right:1px solid #444444;
+    height:100%;
+    float: left;
+    padding-top:10px;
+}
+
+.menu-title {
+    background-color: #333333;
+    width:100%;
+    text-align: center;
+    color:#FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    padding:10px 0px;
+    border: 2px solid #222222;
+}
+.menu-title i {
+    padding-left:10px;
+}
+.menu-title:hover {
+    background-color: #222222;
+}
+.menu-body {
+    margin-top:10px;
+    color:#FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.menu-body ul {
+    list-style: none;
+}
+.menu-body > ul.menu-items .menu-items {
+    display: none;
+}
+.menu-item .menu-name {
+    padding:10px 0px;
+    cursor: pointer;
+    /* 禁止双击选中文字 */
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+
+.menu-item .menu-name a {
+    text-decoration: none;
+    color:#FFFFFF;
+}
+.menu-item .menu-name:hover {
+    background-color: #28a4c9;
+}
+
+/* 案例 */
+
+/*
+
+<div class="menu-box">
+    <div class="menu-title"><i class="pull-left glyphicon glyphicon-menu-hamburger"></i> 菜单栏</div>
+    <div class="menu-body">
+        <ul class="menu-items" data-menu-level="1" data-show-child="true">
+            <li class="menu-item">
+                <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> <a href="#">用户管理</a></div>
+                <ul class="menu-items" data-menu-level="2">
+                    <li class="menu-item">
+                        <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> <a href="#">系统管理</a></div>
+                        <ul class="menu-items" data-menu-level="3">
+                            <li class="menu-item">
+                                <div class="menu-name"> <a href="#">插件管理</a></div>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-name"> <a href="#">图片管理</a></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-name"> <a href="#">文章管理</a></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> <a href="#">系统管理</a></div>
+            </li>
+            <li class="menu-item">
+                <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> 文章管理</div>
+            </li>
+            <li class="menu-item">
+                <div class="menu-name"><i class="glyphicon glyphicon-triangle-right"></i> 访客管理</div>
+            </li>
+            <li class="menu-item">
+                <div class="menu-name" onclick="_tagBox.createTagBox('图片管理','/html/index-child/imagesStream.html');"><i class="glyphicon glyphicon-triangle-right"></i> 图片管理</div>
+            </li>
+            <li class="menu-item">
+                <div class="menu-name" onclick="_tagBox.createTagBox('文件管理','/html/index-child/home.html');"><i class="glyphicon glyphicon-triangle-right"></i> 文件管理</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+*/

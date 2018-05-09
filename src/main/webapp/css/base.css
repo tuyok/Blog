@@ -1,0 +1,114 @@
+/* 通用css */
+ul {margin:0;padding:0;}
+
+.mt-60 { margin-top: 60px; }
+.mt-20 { margin-top: 20px; }
+.mt-15 { margin-top: 15px; }
+.mt-10 { margin-top: 10px; }
+
+.mb-60 { margin-bottom: 60px; }
+.mb-40 { margin-bottom: 40px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-10 { margin-bottom: 10px; }
+
+.plr-10 { padding-left: 10px;padding-right: 10px;}
+.plr-30 { padding-left: 30px;padding-right: 30px;}
+.plr-clear {padding-left: 0px!important;padding-right: 0px!important;}
+.ptb-50 {padding-top: 50px;padding-bottom: 50px;}
+
+.w-1000 { width:1000px; }
+.w-500 { width:500px; }
+.w-ma-1000 { max-width:1000px; }
+.w-ma-500 { max-width:500px; }
+
+.h-mi-200 { min-height: 200px;}
+
+.b1 { border: 1px solid #000000; }
+.br2{ border-right: 2px solid #28a4c9; }
+
+.h-80 { height:80px; }
+
+
+/* 顶部蓝条 */
+div.top-line {
+    width:100%;
+    height:5px;
+    background-color: #28a4c9;
+}
+
+/* 顶部导航条 */
+.nav-box {
+    height:35px;
+    line-height: 35px;
+}
+
+.nav-box span {
+    display: block;
+    float: left;
+    background-color: #444444;
+    margin:0px 2px;
+    width:16px;
+    text-align: center;
+}
+
+.nav-box span:hover {
+    background-color: #28a4c9;
+}
+
+.nav-box span .glyphicon {
+    color:#FFFFFF;
+}
+
+.nav-box .nav-content {
+    list-style: none;
+    float: left;
+}
+
+.nav-content .nav-item {
+    display: inline-block;
+    background-color: #444444;
+}
+.nav-content .nav-item:hover {
+    background-color: #28a4c9;
+}
+.nav-content .nav-item.active{
+    background-color: #28a4c9;
+}
+
+.nav-box .nav-item a {
+    font-size: 14px;
+    color:#FFFFFF;
+    padding:5px;
+    text-decoration: none;
+}
+
+/* 滚动条 */
+.content-box::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+.content-box::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+.content-box::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+body::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background: #535353;
+}
+body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: #EDEDED;
+}
