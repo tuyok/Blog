@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.util;
 
-import com.tuyongkang.blog.model.vo.ResponseVo;
+import com.tuyongkang.blog.mvc.model.ResponseVo;
 
 /**
  * 返回数据工具类

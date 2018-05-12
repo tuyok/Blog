@@ -17,7 +17,7 @@
     <![endif]-->
 
     <!-- 项目css -->
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/admin/login.css">
 
 </head>
 <body>
@@ -26,7 +26,7 @@
     <div class="top-line"></div>
 
     <div id="login-box" class="login-box">
-        <form class="center-block">
+        <form id="loginForm" class="center-block" onsubmit="return false;">
             <div class="form-group">
                 <label for="username">用户名</label>
                 <input type="text" class="form-control" id="username" name="username" placeholder="用户名" autocomplete="false">
@@ -37,9 +37,8 @@
             </div>
             <div class="form-group">
                 <br>
-                <button type="submit" class="btn btn-primary btn-block">登录</button>
+                <a id="loginBtn" class="btn btn-primary btn-block">登录</a>
             </div>
-
         </form>
     </div>
 
@@ -50,7 +49,7 @@
     <script src="/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
     <!-- 项目 js -->
-    <script src="/js/login.js"></script>
+    <script src="/js/admin/login.js"></script>
 
 </body>
 </html>

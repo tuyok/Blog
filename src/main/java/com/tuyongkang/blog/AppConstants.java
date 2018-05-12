@@ -10,13 +10,13 @@ public class AppConstants {
      */
     public static final String BASE_SCAN = "com.tuyongkang.blog";
 
-    public static final String CONTROLLER_SCAN = BASE_SCAN + ".controller";
+    public static final String CONTROLLER_SCAN = BASE_SCAN + ".mvc.controller";
 
     public static final String SERVICE_SCAN = BASE_SCAN + ".service.impl";
 
-    public static final String DAO_SCAN = BASE_SCAN + ".dao";
+    public static final String DAO_SCAN = BASE_SCAN + ".ext.jpa.dao";
 
-    public static final String ENTITY_SCAN = BASE_SCAN + ".entity";
+    public static final String ENTITY_SCAN = BASE_SCAN + ".ext.jpa.entity";
 
     public static final String EXT_CONFIG_SCAN = BASE_SCAN + ".config.ext";
 

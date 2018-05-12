@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.service.impl;
 
-import com.tuyongkang.blog.dao.SysNavDao;
-import com.tuyongkang.blog.entity.SysNavEntity;
+import com.tuyongkang.blog.ext.jpa.dao.SysNavDao;
+import com.tuyongkang.blog.ext.jpa.entity.SysNavEntity;
 import com.tuyongkang.blog.service.SysNavService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +31,7 @@ public class SysNavServiceImpl implements SysNavService {
 
     @Override
     public void deleteById(Integer id) {
-        sysNavDao.delete(id);
+        sysNavDao.deleteById(id);
     }
 
     @Override

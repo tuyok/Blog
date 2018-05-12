@@ -2,6 +2,7 @@ package com.tuyongkang.blog.config.server;
 
 import com.tuyongkang.blog.config.SpringRootConfig;
 import com.tuyongkang.blog.config.SpringWebConfig;
+import com.tuyongkang.blog.config.ext.SecurityConfig;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -26,7 +27,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
      */
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class<?>[] {SpringWebConfig.class}; // 指定配置类
+        return new Class<?>[] {SpringWebConfig.class,SecurityConfig.class}; // 指定配置类
     }
 
     /**

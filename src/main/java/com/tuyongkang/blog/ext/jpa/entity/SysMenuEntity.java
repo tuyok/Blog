@@ -1,10 +1,10 @@
-package com.tuyongkang.blog.entity;
+package com.tuyongkang.blog.ext.jpa.entity;
 
 import javax.persistence.*;
 import java.util.Date;
 
 /**
- * 系统菜单对应的实体类
+ * 系统菜单项表
  */
 @Entity
 @Table(name = "T_SYS_MENU")

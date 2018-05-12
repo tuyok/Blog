@@ -1,4 +1,4 @@
-package com.tuyongkang.blog.entity;
+package com.tuyongkang.blog.ext.jpa.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * 导航项对应的实体类
+ * 系统导航项表
  */
 @Entity
 @Table(name = "T_SYS_NAV")

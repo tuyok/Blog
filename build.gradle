@@ -15,6 +15,7 @@ repositories {
 
 def spring_version = "4.3.3.RELEASE"
 def hibernate_version = "5.0.3.Final"
+def spring_security_version = "4.2.6.RELEASE"
 
 List spring_core = [
         "org.springframework:spring-core:$spring_version",
@@ -30,8 +31,8 @@ List spring_web = [
 ]
 
 List spring_security = [
-        "org.springframework.security:spring-security-web:5.0.5.RELEASE",
-        "org.springframework.security:spring-security-config:5.0.5.RELEASE"
+        "org.springframework.security:spring-security-web:$spring_security_version",
+        "org.springframework.security:spring-security-config:$spring_security_version"
 ]
 
 List spring_data = [
@@ -40,7 +41,7 @@ List spring_data = [
         "org.hibernate:hibernate-entitymanager:$hibernate_version",
 
         "org.springframework:spring-orm:$spring_version",
-        "org.springframework.data:spring-data-jpa:1.11.3.RELEASE",
+        "org.springframework.data:spring-data-jpa:2.0.7.RELEASE",
 ]
 
 List logging = [

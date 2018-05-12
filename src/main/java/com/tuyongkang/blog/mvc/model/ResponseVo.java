@@ -1,4 +1,4 @@
-package com.tuyongkang.blog.model.vo;
+package com.tuyongkang.blog.mvc.model;
 
 /**
  * 通用的ajax响应结果封装
