@@ -43,7 +43,7 @@ public class MyUserDetailsService implements UserDetailsService{
      * @throws UsernameNotFoundException
      */
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) {
         SysUserEntity sysUserEntity = sysUserService.findByUserName(username);
         if(sysUserEntity != null){
             List<SysRoleEntity> permissionEntityList = sysRoleService.findUserRoles(sysUserEntity.getId());
@@ -56,7 +56,7 @@ public class MyUserDetailsService implements UserDetailsService{
             }
             return new User(sysUserEntity.getUserName(),sysUserEntity.getPassword(),grantedAuthorities);
         }else{
-            throw new UsernameNotFoundException("loadUserByUsername: " + username + " do not exist!");
+            return null;
         }
     }
 

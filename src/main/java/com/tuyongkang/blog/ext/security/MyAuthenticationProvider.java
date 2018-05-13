@@ -28,7 +28,7 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
             userDetails = userDetailsService.loadUserByUsername(username);
         }
         if(userDetails == null) {
-            throw new UsernameNotFoundException("用户名/密码无效");
+            throw new UsernameNotFoundException("无效的用户名/密码");
         }else if (!userDetails.isEnabled()){
             throw new DisabledException("用户已被禁用");
         }else if (!userDetails.isAccountNonExpired()) {
@@ -42,7 +42,7 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
         String password = userDetails.getPassword();
         //与authentication里面的credentials相比较
         if(!password.equals(token.getCredentials())) {
-            throw new BadCredentialsException("Invalid username/password");
+            throw new BadCredentialsException("无效的用户名/密码");
         }
         //授权
         return new UsernamePasswordAuthenticationToken(userDetails, password,userDetails.getAuthorities());

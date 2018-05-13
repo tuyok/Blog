@@ -29,7 +29,7 @@ $(function(){
                 if(data.code == 200){
                     location.href = "/admin.html";
                 }else{
-                    alert(data.message);
+                    layer.msg(data.message,{offset: '250px'});
                 }
             }
         })

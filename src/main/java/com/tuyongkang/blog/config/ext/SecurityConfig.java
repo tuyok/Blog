@@ -19,6 +19,8 @@ import org.springframework.security.web.access.intercept.FilterSecurityIntercept
 
 /**
  * 配置spring security
+ * 自定义登录认证
+ * 数据库动态授权
  */
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -83,7 +85,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         // ignore url patterns
-        web.ignoring().antMatchers("/lib/**","/img/**", "/html/**","/js/**","/css/**");
+        web.ignoring().antMatchers("/lib/**","/img/**", "/html/**","/js/**","/css/**","/index.html");
     }
 
     @Override
@@ -94,8 +96,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .csrf().disable()
                 .formLogin()
-                    .loginPage("/login.html")
-                    .loginProcessingUrl("/login")
+                    .loginPage("/login.html")   //除了上面的ignore的，我们都需要进行身份认证
+                    .loginProcessingUrl("/login") //会调用我们自己的权限认证提供者
                     .successForwardUrl("/loginSuccess")
                     .failureForwardUrl("/loginError")
                     .permitAll()

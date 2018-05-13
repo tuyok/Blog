@@ -7,10 +7,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/")
 public class LoginController {
+
+    @RequestMapping("/login")
+    public void login(HttpServletResponse response) throws IOException{
+        response.sendRedirect("/login.html");
+    }
 
     @RequestMapping("loginSuccess")
     @ResponseBody
@@ -20,8 +27,9 @@ public class LoginController {
 
     @RequestMapping("loginError")
     @ResponseBody
-    public ResponseVo loginError(){
-        return ResponseUtil.renderInfo("用户名/密码错误");
+    public ResponseVo loginError(HttpServletRequest request){
+        Exception e = (Exception) request.getAttribute("SPRING_SECURITY_LAST_EXCEPTION");
+        return ResponseUtil.renderInfo(e.getMessage());
     }
 
 }
