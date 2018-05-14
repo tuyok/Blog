@@ -21,10 +21,11 @@
 
     <!-- 项目css -->
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/admin/tag-box.css">
+    <link rel="stylesheet" href="/css/admin/admin.css">
+    <link rel="stylesheet" href="/css/admin/nav-box.css">
     <link rel="stylesheet" href="/css/admin/select-box.css">
     <link rel="stylesheet" href="/css/admin/menu-box.css">
-    <link rel="stylesheet" href="/css/admin/admin.css">
+    <link rel="stylesheet" href="/css/admin/tag-box.css">
 
 </head>
 <body>
@@ -37,16 +38,16 @@
         </div>
         <!-- 头部导航栏 -->
         <nav class="pull-left top-nav">
-            <div class="nav-box">
-                <span><i class="glyphicon glyphicon-triangle-left"></i></span>
+            <div class="nav-box" id="navBox">
+                <!--<span><i class="glyphicon glyphicon-triangle-left"></i></span>-->
                 <ul class="nav-content">
+                    <!--<li class="nav-item active"><a href="#">系统设置</a></li>
                     <li class="nav-item"><a href="#">网站首页</a></li>
                     <li class="nav-item"><a href="#">案例模板</a></li>
                     <li class="nav-item"><a href="#">系统运维</a></li>
-                    <li class="nav-item"><a href="#">数据仓库</a></li>
-                    <li class="nav-item active"><a href="#">系统设置</a></li>
+                    <li class="nav-item"><a href="#">数据仓库</a></li>-->
                 </ul>
-                <span><i class="glyphicon glyphicon-triangle-right"></i></span>
+                <!--<span><i class="glyphicon glyphicon-triangle-right"></i></span>-->
             </div>
         </nav>
         <!-- 登录信息 -->
@@ -97,6 +98,9 @@
                             </li>
                             <li class="menu-item">
                                 <div class="menu-name" onclick="_tagBox.createTagBox('菜单管理','/html/admin-child/menuManage.html');">菜单管理</div>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-name" onclick="window.open('/jobManage.html')">任务调度</div>
                             </li>
                         </ul>
                     </li>
@@ -152,6 +156,7 @@
 
     <!-- 项目 js -->
     <script src="/js/admin/base.js"></script>
+    <script src="/js/admin/nav-box.js"></script>
     <script src="/js/admin/tag-box.js"></script>
     <script src="/js/admin/select-box.js"></script>
     <script src="/js/admin/menu-box.js"></script>

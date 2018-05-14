@@ -1,1 +1,148 @@
-<h1>菜单管理</h1>
+<style>
+    .btn-primary {
+        background-color: #28a4c9;
+        border-radius: 0px;
+        border:none;
+    }
+</style>
+<div class="container-fluid plr-clear">
+
+    <p>
+        <button class="btn btn-primary" id="addNaBtn">新增菜单</button>
+    </p>
+
+    <table id="nav-table">
+
+    </table>
+
+</div>
+
+
+<!-- 新增导航 -->
+<form id="addNavForm" class="form-horizontal" style="margin:20px;display: none;">
+    <div class="form-group">
+        <label for="navName" class="col-sm-2 control-label">菜单项名称</label>
+        <div class="col-sm-10">
+            <input type="text" name="navName" class="form-control" id="navName" placeholder="导航项名称">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="navRemark" class="col-sm-2 control-label">备注</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" name="remark" id="navRemark" placeholder="备注"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="navOrder" class="col-sm-2 control-label">排序值</label>
+        <div class="col-sm-10">
+            <input type="number" name="sort" class="form-control" id="navOrder" placeholder="排序值">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="navOrder" class="col-sm-2 control-label">状态</label>
+        <div class="col-sm-10">
+            <select class="form-control" name="state">
+                <option value="0">无效</option>
+                <option value="0">有效</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+<script>
+    $(function(){
+
+        var $navTable = $("#nav-table");
+
+        $("#addNaBtn").on('click',function(){
+            $("#addNavForm")[0].reset();
+            layer.open({
+                type:1,
+                title:'新增导航项',
+                area:['650px','350px'],
+                content:$('#addNavForm'),
+                btn: ['确定', '取消'],
+                yes: function(index){
+                    $.ajax({
+                        url:'/sys/sysNav/addOrEditSysNav',
+                        type:'post',
+                        dataType:'json',
+                        data:$("#addNavForm").serialize(),
+                        success:function(data){
+                            layer.msg(data.message,{icon: 6,time: 2000});
+                            if(data.code == 200) layer.close(index);
+                            $navTable.bootstrapTable("refresh");
+                        }
+                    });
+                },
+            })
+        });
+
+        $navTable.bootstrapTable({
+            url:'/sys/sysNav/findAll',
+            method:'post',
+            classes:'table table-hover',
+            columns: [{
+                title: '序号',
+                align:'center',
+                formatter:function(value,row,index){
+                    return ++index;
+                }
+            }, {
+                field: 'navName',
+                title: '导航项名称',
+                align:'center',
+            }, {
+                field: 'sort',
+                title: '排序值',
+                align:'center',
+            }, {
+                field: 'state',
+                title: '状态',
+                align:'center',
+                formatter:function(value){
+                    return value==1?'无效':'有效';
+                }
+            }, {
+                field: 'remark',
+                title: '备注',
+                align:'center',
+            }, {
+                field: 'updateTime',
+                title: '更新时间',
+                align:'center',
+            }, {
+                field: 'updateUserId',
+                title: '更新用户',
+                align:'center'
+            }, {
+                title: '操作',
+                align:'center',
+                formatter:function(value,row){
+                    var html = '<button class="btn btn-primary editNav" data-id="'+row.id+'">编辑</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-danger delNav" data-id="'+row.id+'">删除</button>';
+                    return html;
+                }
+            }]
+        });
+
+        $navTable.on('click','.editNav',function(){
+            var rowId = $(this).data("id");
+            console.log(rowId);
+        });
+
+        $navTable.on('click','.delNav',function(){
+            var rowId = $(this).data("id");
+            layer.confirm('确定要删除该导航项吗？', {icon: 3, title:'提示'}, function(index){
+                console.log(rowId)
+                $.post('/sys/sysNav/deleteById',{id:rowId},function(data){
+                    layer.msg(data.message,{icon: 6,time: 2000});
+                    if(data.code == 200){
+                        $navTable.bootstrapTable('refresh');
+                    }
+                },'json');
+                layer.close(index);
+            });
+        });
+
+    })
+</script>

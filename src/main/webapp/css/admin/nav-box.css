@@ -1,0 +1,45 @@
+/* 顶部导航条 */
+.nav-box {
+    height:35px;
+    line-height: 35px;
+}
+
+.nav-box span {
+    display: block;
+    float: left;
+    background-color: #444444;
+    margin:0px 2px;
+    width:16px;
+    text-align: center;
+}
+
+.nav-box span:hover {
+    background-color: #28a4c9;
+}
+
+.nav-box span .glyphicon {
+    color:#FFFFFF;
+}
+
+.nav-box .nav-content {
+    list-style: none;
+    float: left;
+}
+
+.nav-content .nav-item {
+    display: inline-block;
+    background-color: #444444;
+}
+.nav-content .nav-item:hover {
+    background-color: #28a4c9;
+}
+.nav-content .nav-item.active{
+    background-color: #28a4c9;
+}
+
+.nav-box .nav-item a {
+    font-size: 14px;
+    color:#FFFFFF;
+    padding:5px;
+    text-decoration: none;
+}

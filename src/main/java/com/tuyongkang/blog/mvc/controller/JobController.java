@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/job")
@@ -167,11 +169,13 @@ public class JobController {
      * @return
      */
     @GetMapping(value="/queryjob")
-    public ResponseVo queryjob()
+    public Map<String, Object> queryjob()
     {
         List<JobAndTriggerOutVo> jobAndTrigger = jobAndTriggerService.getJobAndTriggerDetails();
-        return ResponseUtil.renderSuccess(jobAndTrigger);
-
+        Map<String, Object> map = new HashMap<>();
+        map.put("JobAndTrigger", jobAndTrigger);
+        map.put("number", jobAndTrigger.size());
+        return map;
     }
 
     private static Job getClass(String classname) throws Exception

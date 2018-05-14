@@ -15,6 +15,12 @@ public class JobAndTriggerOutVo {
     private String triggerName;
     // 触发器所在组
     private String triggerGroup;
+
+    //调度表达式
+    private String cronExpression;
+    //时区
+    private String timeZoneId;
+
     // 触发间隔(毫秒)
     private Long repeatInterval;
     // 已触发次数
@@ -58,6 +64,22 @@ public class JobAndTriggerOutVo {
 
     public void setTriggerGroup(String triggerGroup) {
         this.triggerGroup = triggerGroup;
+    }
+
+    public String getCronExpression() {
+        return cronExpression;
+    }
+
+    public void setCronExpression(String cronExpression) {
+        this.cronExpression = cronExpression;
+    }
+
+    public String getTimeZoneId() {
+        return timeZoneId;
+    }
+
+    public void setTimeZoneId(String timeZoneId) {
+        this.timeZoneId = timeZoneId;
     }
 
     public Long getRepeatInterval() {

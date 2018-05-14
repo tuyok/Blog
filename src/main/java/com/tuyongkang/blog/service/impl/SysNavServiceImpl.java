@@ -4,6 +4,7 @@ import com.tuyongkang.blog.dao.repository.SysNavRepository;
 import com.tuyongkang.blog.entity.SysNavEntity;
 import com.tuyongkang.blog.service.SysNavService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -36,7 +37,7 @@ public class SysNavServiceImpl implements SysNavService {
 
     @Override
     public List<SysNavEntity> findAll() {
-        return sysNavRepository.findAll();
+        return sysNavRepository.findAll(new Sort(Sort.Direction.ASC,"sort"));
     }
 
 }
