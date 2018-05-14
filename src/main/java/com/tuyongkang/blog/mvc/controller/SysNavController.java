@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.mvc.controller;
 
-import com.tuyongkang.blog.ext.jpa.entity.SysNavEntity;
+import com.tuyongkang.blog.entity.SysNavEntity;
 import com.tuyongkang.blog.mvc.model.ResponseVo;
 import com.tuyongkang.blog.service.SysNavService;
 import com.tuyongkang.blog.util.ResponseUtil;

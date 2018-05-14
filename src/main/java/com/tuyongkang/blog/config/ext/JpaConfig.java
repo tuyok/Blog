@@ -9,6 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
@@ -20,7 +21,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @PropertySource("classpath:jdbc.properties")
-@EnableJpaRepositories(value= AppConstants.DAO_SCAN)
+@EnableJpaRepositories(value= AppConstants.REPOSITORY_SCAN)
 @EnableTransactionManagement
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class JpaConfig {
@@ -75,4 +76,5 @@ public class JpaConfig {
         txManager.setEntityManagerFactory(emf);
         return txManager;
     }
+
 }

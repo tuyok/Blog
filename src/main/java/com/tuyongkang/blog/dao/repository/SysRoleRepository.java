@@ -1,12 +1,12 @@
-package com.tuyongkang.blog.ext.jpa.dao;
+package com.tuyongkang.blog.dao.repository;
 
-import com.tuyongkang.blog.ext.jpa.entity.SysRoleEntity;
+import com.tuyongkang.blog.entity.SysRoleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface SysRoleDao extends JpaRepository<SysRoleEntity,Integer> {
+public interface SysRoleRepository extends JpaRepository<SysRoleEntity,Integer> {
 
     /**
      * 根据用户的ID获取用户的角色列表

@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.service.impl;
 
-import com.tuyongkang.blog.ext.jpa.dao.SysNavDao;
-import com.tuyongkang.blog.ext.jpa.entity.SysNavEntity;
+import com.tuyongkang.blog.dao.repository.SysNavRepository;
+import com.tuyongkang.blog.entity.SysNavEntity;
 import com.tuyongkang.blog.service.SysNavService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class SysNavServiceImpl implements SysNavService {
 
 
     @Autowired
-    private SysNavDao sysNavDao;
+    private SysNavRepository sysNavRepository;
 
     @Override
     public void saveOrUpdate(SysNavEntity sysNavEntity) {
@@ -26,17 +26,17 @@ public class SysNavServiceImpl implements SysNavService {
         }else{
             sysNavEntity.setUpdateTime(new Date());
         }
-        sysNavDao.save(sysNavEntity);
+        sysNavRepository.save(sysNavEntity);
     }
 
     @Override
     public void deleteById(Integer id) {
-        sysNavDao.deleteById(id);
+        sysNavRepository.deleteById(id);
     }
 
     @Override
     public List<SysNavEntity> findAll() {
-        return sysNavDao.findAll();
+        return sysNavRepository.findAll();
     }
 
 }

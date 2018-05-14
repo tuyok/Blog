@@ -1,10 +1,6 @@
 package com.tuyongkang.blog.service;
 
-import com.tuyongkang.blog.ext.jpa.entity.SysPermissionEntity;
-import com.tuyongkang.blog.ext.jpa.entity.SysRoleEntity;
-import com.tuyongkang.blog.ext.jpa.entity.SysUserEntity;
-
-import java.util.List;
+import com.tuyongkang.blog.entity.SysUserEntity;
 
 /**
  *  系统用户管理服务

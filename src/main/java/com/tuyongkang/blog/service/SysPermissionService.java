@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.service;
 
-import com.tuyongkang.blog.ext.jpa.entity.SysPermissionEntity;
+import com.tuyongkang.blog.entity.SysPermissionEntity;
 
 import java.util.List;
 

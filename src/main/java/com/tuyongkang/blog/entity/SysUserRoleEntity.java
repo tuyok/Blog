@@ -1,4 +1,4 @@
-package com.tuyongkang.blog.ext.jpa.entity;
+package com.tuyongkang.blog.entity;
 
 import javax.persistence.*;
 

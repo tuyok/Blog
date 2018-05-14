@@ -1,9 +1,9 @@
-package com.tuyongkang.blog.ext.jpa.dao;
+package com.tuyongkang.blog.dao.repository;
 
-import com.tuyongkang.blog.ext.jpa.entity.SysUserEntity;
+import com.tuyongkang.blog.entity.SysUserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SysUserDao extends JpaRepository<SysUserEntity,Integer> {
+public interface SysUserRepository extends JpaRepository<SysUserEntity,Integer> {
 
     /**
      * 根据用户名获取用户

@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.service.impl;
 
-import com.tuyongkang.blog.ext.jpa.dao.SysRoleDao;
-import com.tuyongkang.blog.ext.jpa.entity.SysRoleEntity;
+import com.tuyongkang.blog.dao.repository.SysRoleRepository;
+import com.tuyongkang.blog.entity.SysRoleEntity;
 import com.tuyongkang.blog.service.SysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.List;
 public class SysRoleServiceImpl implements SysRoleService {
 
     @Autowired
-    private SysRoleDao sysRoleDao;
+    private SysRoleRepository sysRoleDao;
 
     @Override
     public List<SysRoleEntity> findUserRoles(Integer userId) {

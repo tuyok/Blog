@@ -1,12 +1,12 @@
-package com.tuyongkang.blog.ext.jpa.dao;
+package com.tuyongkang.blog.dao.repository;
 
-import com.tuyongkang.blog.ext.jpa.entity.SysPermissionEntity;
+import com.tuyongkang.blog.entity.SysPermissionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface SysPermissionDao extends JpaRepository<SysPermissionEntity,Integer> {
+public interface SysPermissionRepository extends JpaRepository<SysPermissionEntity,Integer> {
 
     /**
      * 获取某个角色的所有权限

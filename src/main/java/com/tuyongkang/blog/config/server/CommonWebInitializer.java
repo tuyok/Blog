@@ -1,5 +1,6 @@
 package com.tuyongkang.blog.config.server;
 
+import org.quartz.ee.servlet.QuartzInitializerListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.Conventions;
@@ -43,6 +44,7 @@ public class CommonWebInitializer implements WebApplicationInitializer {
 
         //配置监听器
         servletContext.addListener(new IntrospectorCleanupListener());
+        servletContext.addListener(new QuartzInitializerListener());    //Quartz 初始化监听器
     }
 
 

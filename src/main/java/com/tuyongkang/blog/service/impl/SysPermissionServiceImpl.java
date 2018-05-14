@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.service.impl;
 
-import com.tuyongkang.blog.ext.jpa.dao.SysPermissionDao;
-import com.tuyongkang.blog.ext.jpa.entity.SysPermissionEntity;
+import com.tuyongkang.blog.dao.repository.SysPermissionRepository;
+import com.tuyongkang.blog.entity.SysPermissionEntity;
 import com.tuyongkang.blog.service.SysPermissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.List;
 public class SysPermissionServiceImpl implements SysPermissionService {
 
     @Autowired
-    private SysPermissionDao sysPermissionDao;
+    private SysPermissionRepository sysPermissionDao;
 
     @Override
     public List<SysPermissionEntity> findAll() {

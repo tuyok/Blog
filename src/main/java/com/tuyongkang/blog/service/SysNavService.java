@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.service;
 
-import com.tuyongkang.blog.ext.jpa.entity.SysNavEntity;
+import com.tuyongkang.blog.entity.SysNavEntity;
 
 import java.util.List;
 

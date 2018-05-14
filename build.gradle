@@ -44,6 +44,12 @@ List spring_data = [
         "org.springframework.data:spring-data-jpa:2.0.7.RELEASE",
 ]
 
+def quartz_version = "2.2.1"
+List quartz = [
+    "org.quartz-scheduler:quartz:$quartz_version",
+    "org.quartz-scheduler:quartz-jobs:$quartz_version",
+]
+
 List logging = [
         "org.slf4j:jcl-over-slf4j:1.7.21",
         "ch.qos.logback:logback-classic:1.1.7",
@@ -90,7 +96,7 @@ List util = [
 
 dependencies {
 
-    compile spring_core,spring_web,spring_security,spring_data
+    compile spring_core,spring_web,spring_security,spring_data,quartz
     compile logging,jdbc,json,httpClient,apache_commons,util
 
     providedCompile servlet
