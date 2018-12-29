@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.util;
 
-import com.tuyongkang.blog.mvc.model.ResponseVo;
+import com.tuyongkang.blog.model.vo.ResponseVo;
 
 /**
  * 返回数据工具类
@@ -32,7 +32,7 @@ public class ResponseUtil {
     public static ResponseVo renderError(){
         ResponseVo responseVo = new ResponseVo();
         responseVo.setCode(500);
-        responseVo.setMessage("系统出现异常");
+        responseVo.setMessage("系统异常，请稍后重试");
         responseVo.setData(null);
         return responseVo;
     }

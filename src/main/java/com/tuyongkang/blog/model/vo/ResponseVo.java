@@ -1,9 +1,9 @@
-package com.tuyongkang.blog.mvc.model;
+package com.tuyongkang.blog.model.vo;
 
 /**
  * 通用的ajax响应结果封装
  */
-public class ResponseVo {
+public class ResponseVo<T> {
 
     /**
      * 结果码
@@ -18,7 +18,7 @@ public class ResponseVo {
     /**
      * 结果数据
      */
-    private Object data;
+    private T data;
 
     public ResponseVo(){}
 
@@ -38,11 +38,11 @@ public class ResponseVo {
         this.message = message;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 

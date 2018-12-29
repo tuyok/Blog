@@ -1,4 +1,4 @@
-package com.tuyongkang.blog.mvc.model;
+package com.tuyongkang.blog.model.vo;
 
 /**
  * 任务调度管理页面展示信息

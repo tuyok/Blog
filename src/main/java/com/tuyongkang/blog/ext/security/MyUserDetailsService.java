@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.ext.security;
 
-import com.tuyongkang.blog.entity.SysRoleEntity;
-import com.tuyongkang.blog.entity.SysUserEntity;
+import com.tuyongkang.blog.model.entity.SysRoleEntity;
+import com.tuyongkang.blog.model.entity.SysUserEntity;
 import com.tuyongkang.blog.service.SysRoleService;
 import com.tuyongkang.blog.service.SysUserService;
 import org.springframework.security.core.GrantedAuthority;

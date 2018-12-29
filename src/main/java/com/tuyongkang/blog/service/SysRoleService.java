@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.service;
 
-import com.tuyongkang.blog.entity.SysRoleEntity;
+import com.tuyongkang.blog.model.entity.SysRoleEntity;
 
 import java.util.List;
 

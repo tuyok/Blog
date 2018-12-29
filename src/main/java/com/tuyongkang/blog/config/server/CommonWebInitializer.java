@@ -44,7 +44,7 @@ public class CommonWebInitializer implements WebApplicationInitializer {
 
         //配置监听器
         servletContext.addListener(new IntrospectorCleanupListener());
-        servletContext.addListener(new QuartzInitializerListener());    //Quartz 初始化监听器
+//        servletContext.addListener(new QuartzInitializerListener());    //Quartz 初始化监听器
     }
 
 

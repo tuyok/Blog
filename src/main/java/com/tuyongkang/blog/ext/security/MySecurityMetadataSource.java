@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.ext.security;
 
-import com.tuyongkang.blog.entity.SysPermissionEntity;
-import com.tuyongkang.blog.entity.SysRoleEntity;
+import com.tuyongkang.blog.model.entity.SysPermissionEntity;
+import com.tuyongkang.blog.model.entity.SysRoleEntity;
 import com.tuyongkang.blog.service.SysPermissionService;
 import com.tuyongkang.blog.service.SysRoleService;
 import org.springframework.security.access.ConfigAttribute;

@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.dao.repository;
 
-import com.tuyongkang.blog.entity.SysUserEntity;
+import com.tuyongkang.blog.model.entity.SysUserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SysUserRepository extends JpaRepository<SysUserEntity,Integer> {

@@ -1,4 +1,4 @@
-package com.tuyongkang.blog.entity;
+package com.tuyongkang.blog.model.entity;
 
 import javax.persistence.*;
 

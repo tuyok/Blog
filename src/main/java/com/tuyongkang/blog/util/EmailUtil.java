@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.util;
 
-import com.tuyongkang.blog.util.exception.BusinessException;
+import com.tuyongkang.blog.exception.BusinessException;
 import com.tuyongkang.blog.util.Vo.EmailAttachmentVo;
 import com.tuyongkang.blog.util.Vo.EmailInfoVo;
 import com.tuyongkang.blog.util.Vo.MailAccount;

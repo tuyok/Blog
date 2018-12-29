@@ -1,4 +1,4 @@
-package com.tuyongkang.blog.entity;
+package com.tuyongkang.blog.model.entity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -180,5 +180,23 @@ public class SysMenuEntity {
 
     public void setUpdateUserId(Integer updateUserId) {
         this.updateUserId = updateUserId;
+    }
+
+    @Override
+    public String toString() {
+        return "SysMenuEntity{" +
+                "id=" + id +
+                ", menuName='" + menuName + '\'' +
+                ", menuUrl='" + menuUrl + '\'' +
+                ", fatherId=" + fatherId +
+                ", sysNavId=" + sysNavId +
+                ", remark='" + remark + '\'' +
+                ", sort=" + sort +
+                ", state=" + state +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", createUserId=" + createUserId +
+                ", updateUserId=" + updateUserId +
+                '}';
     }
 }

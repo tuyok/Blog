@@ -1,7 +1,7 @@
-package com.tuyongkang.blog.mvc.controller;
+package com.tuyongkang.blog.controller.sys;
 
-import com.tuyongkang.blog.entity.SysNavEntity;
-import com.tuyongkang.blog.mvc.model.ResponseVo;
+import com.tuyongkang.blog.model.entity.SysNavEntity;
+import com.tuyongkang.blog.model.vo.ResponseVo;
 import com.tuyongkang.blog.service.SysNavService;
 import com.tuyongkang.blog.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * 导航栏管理请求控制器
+ * 系统 导航栏管理 请求控制器
  */
 @RestController
 @RequestMapping("/sys/sysNav")
@@ -21,7 +21,7 @@ public class SysNavController {
     private SysNavService sysNavService;
 
     /**
-     * 添加一个导航项
+     * 添加/编辑一个导航项
      * @param sysNavEntity
      * @return
      */

@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.dao.repository;
 
-import com.tuyongkang.blog.entity.SysRoleEntity;
+import com.tuyongkang.blog.model.entity.SysRoleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

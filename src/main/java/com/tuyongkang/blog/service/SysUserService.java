@@ -1,6 +1,6 @@
 package com.tuyongkang.blog.service;
 
-import com.tuyongkang.blog.entity.SysUserEntity;
+import com.tuyongkang.blog.model.entity.SysUserEntity;
 
 /**
  *  系统用户管理服务

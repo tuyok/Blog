@@ -1,4 +1,4 @@
-package com.tuyongkang.blog.util.exception;
+package com.tuyongkang.blog.exception;
 
 /**
  * 自定义的业务异常

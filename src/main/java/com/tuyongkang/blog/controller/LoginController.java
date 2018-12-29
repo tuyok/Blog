@@ -1,6 +1,6 @@
-package com.tuyongkang.blog.mvc.controller;
+package com.tuyongkang.blog.controller;
 
-import com.tuyongkang.blog.mvc.model.ResponseVo;
+import com.tuyongkang.blog.model.vo.ResponseVo;
 import com.tuyongkang.blog.util.ResponseUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

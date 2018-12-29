@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.dao.impl;
 
 import com.tuyongkang.blog.dao.JobAndTriggerDao;
-import com.tuyongkang.blog.mvc.model.JobAndTriggerOutVo;
+import com.tuyongkang.blog.model.vo.JobAndTriggerOutVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

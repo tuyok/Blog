@@ -1,7 +1,7 @@
 package com.tuyongkang.blog.service.impl;
 
 import com.tuyongkang.blog.dao.repository.SysNavRepository;
-import com.tuyongkang.blog.entity.SysNavEntity;
+import com.tuyongkang.blog.model.entity.SysNavEntity;
 import com.tuyongkang.blog.service.SysNavService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -20,8 +20,6 @@ public class SysNavServiceImpl implements SysNavService {
     @Override
     public void saveOrUpdate(SysNavEntity sysNavEntity) {
         if(sysNavEntity.getId() == null){
-            if(sysNavEntity.getState() == null) sysNavEntity.setState((byte)0);
-            if(sysNavEntity.getSort() == null) sysNavEntity.setState((byte)0);
             sysNavEntity.setCreateTime(new Date());
             sysNavEntity.setUpdateTime(sysNavEntity.getCreateTime());
         }else{

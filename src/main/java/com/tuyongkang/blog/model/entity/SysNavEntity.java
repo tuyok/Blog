@@ -1,6 +1,7 @@
-package com.tuyongkang.blog.entity;
+package com.tuyongkang.blog.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -44,7 +45,17 @@ public class SysNavEntity {
      * 1 有效
      */
     @Column(name = "state")
+    @ColumnDefault("0")
     private Byte state;
+
+    /**
+     * 逻辑删除标识
+     * 0 正常数据
+     * 1 逻辑删除数据
+     */
+    @Column(name = "delete_flag")
+    @ColumnDefault("0")
+    private Byte deleteFlag;
 
     /**
      * 创建时间
